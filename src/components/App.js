@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import {hot} from "react-hot-loader";
-import "../styles/App.css";
+import "../styles/app.css";
 
-import Banner from './Banner'
-import Profiles from './Profiles'
+import Banner from './banner'
+import Profiles from './profiles'
 
 class App extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <div className="row">
           <Banner />
           <Profiles />

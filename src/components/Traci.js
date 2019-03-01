@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {hot} from "react-hot-loader";
-import "../styles/Traci.css";
+import "../styles/traci.css";
 
 class Traci extends Component {
   constructor() {

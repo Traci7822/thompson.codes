@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import {hot} from "react-hot-loader";
-import "../styles/Profiles.css";
+import "../styles/profiles.css";
 
-import Bryan from './Bryan'
-import Traci from './Traci'
+import Bryan from './bryan'
+import Traci from './traci'
 
 class Profiles extends Component {
   constructor() {
@@ -14,11 +14,11 @@ class Profiles extends Component {
   }
   render() {
     return (
-      <div className="Profiles">
-        <div className="Traci">
+      <div className="profiles">
+        <div className="traci">
           <Traci />
         </div>
-        <div className="Bryan">
+        <div className="bryan">
           <Bryan />
         </div>
       </div>

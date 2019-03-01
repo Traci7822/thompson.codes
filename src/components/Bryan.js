@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {hot} from "react-hot-loader";
-import "../styles/Bryan.css";
+import "../styles/bryan.css";
 
 class Bryan extends Component {
   constructor() {
