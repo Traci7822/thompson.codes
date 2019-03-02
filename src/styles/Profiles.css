@@ -2,5 +2,16 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+.profile_image {
+  width: 50%;
+  margin-left: 25%;
+  border: 3px solid;
+}
+
+.name {
+  text-align: center;
+  padding: 20px;
 }

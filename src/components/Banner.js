@@ -15,9 +15,9 @@ class Banner extends Component {
     return (
       <div className="banner">
         <span className="title">
-        <h1 className="name">THOMPSON</h1>
+        <h1 className="title_name first">THOMPSON</h1>
           <img className="title_image" src={mountain} />
-         <h1 className="name">CODES</h1>
+         <h1 className="title_name second">CODES</h1>
          </span>
       </div>
     )
