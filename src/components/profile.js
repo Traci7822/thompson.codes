@@ -12,8 +12,8 @@ class Profile extends Component {
   render() {
     return (
       <div>
-        <h1 className="name">{this.props.name}</h1>
-        <img className="profile_image" src={require(`../assets/${this.props.name.toLowerCase()}.jpg`)}/>
+        <h1 className="name"><a href={this.props.person[1]} target="_blank">{this.props.person[0]}</a></h1>
+        <img className="profile_image" src={require(`../assets/${this.props.person[0].toLowerCase()}.jpg`)}/>
       </div>
     );
   }

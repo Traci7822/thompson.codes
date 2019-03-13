@@ -8,15 +8,18 @@ class Profiles extends Component {
   constructor() {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
-      names: ["Traci", "Bryan"]
+      people: {
+        Traci: "http://www.tracihthompson.com",
+        Bryan: "http://www.snowboardtechie.com"
+      }
     };
   }
   render() {
     return (
       <div className="profiles">
-        {this.state.names.map(item => (
-          <Profile key={item} name={item} />
-        ))}
+        {Object.entries(this.state.people).map(function(person) {
+          return <Profile key={person} person={person} />
+        })}
       </div>
     );
   }
