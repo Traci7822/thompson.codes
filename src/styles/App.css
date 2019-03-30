@@ -2,3 +2,7 @@
   margin: 1rem;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
+
+html, body, #app, #app>div {
+  height: 100%
+}
