@@ -11,76 +11,40 @@ class App extends Component {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
       showBanner: true,
-      showAbout: true,
-      showProfiles: true
+      showAbout: false,
+      showProfiles: false
     }
-    this.displayBanner = this.displayBanner.bind(this);
-    this.hideBanner = this.hideBanner.bind(this);
-    this.displayProfiles = this.displayProfiles.bind(this);
-
   }
 
-  displayBanner() {
+  toggleBanner = () => {
     this.setState({
-      showBanner: true,
-      showAbout: false,
-      showProfiles: false
+      showAbout: !this.state.showAbout,
+      showBanner: !this.state.showBanner,
     })
   }
 
-  hideBanner() {
+  toggleAbout = () => {
     this.setState({
-      showBanner: false,
-      showAbout: true,
-      showProfiles: false
+      showAbout: !this.state.showAbout,
+      showProfiles: !this.state.showProfiles
     })
   }
 
-  displayProfiles() {
+  toggleProfiles = () => {
     this.setState({
-      showBanner: false,
-      showAbout: false,
-      showProfiles: true
+      showBanner: !this.state.showBanner,
+      showProfiles: !this.state.showProfiles
     })
   }
 
   render() {
-    // Figure out how to actual do conditional rendering
-    if (this.state.showBanner) {
-     return (
-        <div className="app">
-          <div className="row">
-            <button className="banner" onClick={this.hideBanner}>
-              <Banner />
-            </button>
-          </div>
-        </div>
-      )
-    }
-
-    if (this.state.showAbout) {
-      return (
-        <div className="app">
-          <div className="row">
-            <button className="about" onClick={this.displayProfiles}>
-              <About />
-            </button>
-          </div>
-        </div>
-      )
-    }
-
-    if (this.state.showProfiles) {
-      return (
-        <div className="app">
-          <div className="row">
-            <button className="about" onClick={this.displayBanner}>
-              <Profiles />
-            </button>
-          </div>
-        </div>
-      )
-    }
+    return (
+      <div>
+        <Banner toggleBanner={this.toggleBanner} showBanner={this.state.showBanner} />
+        <About toggleAbout={this.toggleAbout} showAbout={this.state.showAbout} />
+        <Profiles toggleProfiles={this.toggleProfiles} showProfiles={this.state.showProfiles} />
+      </div>
+    )
   }
 }
 

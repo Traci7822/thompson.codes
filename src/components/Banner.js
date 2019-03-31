@@ -8,12 +8,16 @@ class Banner extends Component {
   constructor() {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
-      results: {}
     }
   }
+
   render() {
+    if (!this.props.showBanner) {
+      return null;
+    }
+
     return (
-      <div className="banner">
+      <div className="banner" onClick={this.props.toggleBanner}>
         <span className="title">
         <h1 className="title_name first">THOMPSON</h1>
           <img className="title_image" src={mountain} />
