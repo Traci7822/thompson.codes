@@ -1,4 +1,8 @@
-.about {
-  width: 100%;
+.about_us {
   position: absolute;
+  background: white;
+  border: 3px solid black;
+  height: 250px;
+  width: 250px;
+  text-align: center;
 }

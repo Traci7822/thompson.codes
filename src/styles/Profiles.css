@@ -1,3 +1,8 @@
+.profile {
+  width: 50%;
+  overflow: hidden;
+}
+
 .profiles {
   display: flex;
   flex-direction: row;
@@ -14,18 +19,4 @@
 
 .profile_image:hover {
   opacity: 0.3;
-}
-
-.name {
-  text-align: center;
-  padding: 20px;
-}
-
-.about {
-  height: 800px;
-}
-
-.profile {
-  width: 50%;
-  overflow: hidden;
 }

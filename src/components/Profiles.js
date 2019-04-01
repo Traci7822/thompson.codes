@@ -3,6 +3,7 @@ import {hot} from "react-hot-loader";
 import "../styles/profiles.css";
 
 import Profile from './profile'
+import About from './about'
 
 class Profiles extends Component {
   constructor() {
@@ -26,6 +27,9 @@ class Profiles extends Component {
         {Object.entries(this.state.people).map(function(person) {
           return <Profile key={person} person={person} />
         })}
+        <div className="about_us">
+          <About />
+        </div>
       </div>
     );
   }
