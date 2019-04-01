@@ -22,7 +22,7 @@ class Profiles extends Component {
     }
 
     return (
-      <div className="profiles" onClick={this.props.toggleProfiles}>
+      <div className="profiles">
         {Object.entries(this.state.people).map(function(person) {
           return <Profile key={person} person={person} />
         })}

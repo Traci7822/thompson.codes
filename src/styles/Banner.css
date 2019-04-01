@@ -1,8 +1,8 @@
 .banner {
   background-color: #7ACED7;
-  height: 800px;
+  height: 100%;
   display: block;
-  position: relative;
+  position: absolute;
   width: 100%;
   top: 0px;
 }

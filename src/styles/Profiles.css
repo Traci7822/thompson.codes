@@ -3,10 +3,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .profile_image {
-  width: 60%;
   border: 3px solid;
 }
 
@@ -21,4 +23,9 @@
 
 .about {
   height: 800px;
+}
+
+.profile {
+  width: 50%;
+  overflow: hidden;
 }

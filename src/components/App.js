@@ -19,7 +19,7 @@ class App extends Component {
   toggleBanner = () => {
     this.setState({
       showAbout: !this.state.showAbout,
-      showBanner: !this.state.showBanner,
+      showBanner: !this.state.showBanner
     })
   }
 

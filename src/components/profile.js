@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import {hot} from "react-hot-loader";
 
+import ProfileText from './profile_text';
+
 class Profile extends Component {
   constructor() {
     super(); // populates this.props (fixed for lifetime of component)
@@ -11,9 +13,12 @@ class Profile extends Component {
 
   render() {
     return (
-      <div>
-        <h1 className="name"><a href={this.props.person[1]} target="_blank">{this.props.person[0]}</a></h1>
-        <img className="profile_image" src={require(`../assets/${this.props.person[0].toLowerCase()}.jpg`)}/>
+      <div className="profile">
+        <div class="image">
+          <a href={this.props.person[1]} target="_blank">
+            <img className="profile_image" src={require(`../assets/${this.props.person[0].toLowerCase()}.jpg`)}/>
+          </a>
+        </div>
       </div>
     );
   }
