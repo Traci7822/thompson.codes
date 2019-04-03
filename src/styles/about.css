@@ -1,8 +1,23 @@
 .about_us {
   position: absolute;
-  background: white;
-  border: 3px solid black;
+  text-align: center;
+}
+
+.about_us.small_about {
   height: 250px;
   width: 250px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../assets/asterisk.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Add transition effect when growing to large */
+.about_us.large_about {
+  height: 90%;
+  width: 40%;
+  border: 5px solid black;
+  background: white;
 }

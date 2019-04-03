@@ -14,7 +14,14 @@ class Profiles extends Component {
         Traci: "http://www.tracihthompson.com",
         Bryan: "http://www.snowboardtechie.com"
       },
+      expand: false
     };
+  }
+
+  expandAbout = () => {
+    this.setState({
+      expand: !this.state.expand
+    });
   }
 
   render() {
@@ -22,13 +29,16 @@ class Profiles extends Component {
       return null;
     }
 
+    const about_size = this.state.expand ? "large_about" : "small_about";
+    const profile_size = this.state.expand ? "small_profile" : "large_profile";
+
     return (
-      <div className="profiles">
+      <div className='profiles'>
         {Object.entries(this.state.people).map(function(person) {
-          return <Profile key={person} person={person} />
+          return <Profile key={person} person={person} profile_size={profile_size}/>
         })}
-        <div className="about_us">
-          <About />
+        <div className={'about_us ' + about_size} onClick={this.expandAbout}>
+          <About expand={this.state.expand}/>
         </div>
       </div>
     );

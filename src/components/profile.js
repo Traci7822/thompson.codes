@@ -13,12 +13,8 @@ class Profile extends Component {
 
   render() {
     return (
-      <div className="profile">
-        <div class="image">
-          <a href={this.props.person[1]} target="_blank">
-            <img className="profile_image" src={require(`../assets/${this.props.person[0].toLowerCase()}.jpg`)}/>
-          </a>
-        </div>
+      <div className={'profile ' + this.props.profile_size + ' ' + this.props.person[0].toLowerCase()}>
+          <a className='profile_link' href={this.props.person[1]} target="_blank" />
       </div>
     );
   }

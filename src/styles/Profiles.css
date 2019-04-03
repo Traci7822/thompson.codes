@@ -1,8 +1,3 @@
-.profile {
-  width: 50%;
-  overflow: hidden;
-}
-
 .profiles {
   display: flex;
   flex-direction: row;
@@ -13,10 +8,40 @@
   position: absolute;
 }
 
-.profile_image {
+.profile {
+  width: 50%;
+  overflow: hidden;
+  background-repeat: no-repeat;
   border: 3px solid;
 }
 
-.profile_image:hover {
-  opacity: 0.3;
+.traci {
+  background-image: url('../assets/traci.jpg');
+  height: 100%;
+}
+
+.traci.profile.small_profile {
+  opacity: 0.4;
+}
+
+.traci.profile.small_profile:hover {
+  opacity: 1;
+}
+
+.bryan {
+  background-image: url('../assets/bryan2.jpg');
+  height: 100%;
+}
+
+.bryan.profile.small_profile {
+  opacity: 0.4;
+}
+
+.bryan.profile.small_profile:hover {
+  opacity: 1;
+}
+
+.profile_link {
+  display: block;
+  height: 100%;
 }

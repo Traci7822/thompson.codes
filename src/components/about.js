@@ -10,10 +10,13 @@ class About extends Component {
   }
 
   render() {
+    const header = React.createElement('h1', {}, 'The Thompsons');
+    const body = React.createElement('p', {}, 'Are amazing');
+    const content = React.createElement('div', {}, [header, body]);
+
     return (
-      <div className="about">
-        <h1>The Thompsons</h1>
-        <p>are amazing</p>
+      <div className="about_link">
+        {this.props.expand ? content : ''}
       </div>
     );
   }
