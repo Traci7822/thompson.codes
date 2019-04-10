@@ -4,6 +4,10 @@
 }
 
 html, body, #app, #app>div {
-  height: 100%;
   margin: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column
 }

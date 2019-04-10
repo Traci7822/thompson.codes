@@ -1,23 +1,25 @@
-.about_us {
-  position: absolute;
-  text-align: center;
-}
-
 .about_us.small_about {
+  margin: 30px auto 30px auto;
   height: 250px;
   width: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url('../assets/asterisk.png');
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
 /* Add transition effect when growing to large */
 .about_us.large_about {
-  height: 90%;
-  width: 40%;
-  border: 5px solid black;
+  width: 100%;
   background: white;
+  padding-top: 1%;
+  height: -webkit-fill-available;
+}
+
+.split_asterisk {
+  height: 300px;
+}
+
+.about_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

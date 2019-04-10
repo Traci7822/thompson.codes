@@ -10,15 +10,17 @@ class About extends Component {
   }
 
   render() {
-    const header = React.createElement('h1', {}, 'The Thompsons');
-    const body = React.createElement('p', {}, 'Are amazing');
-    const content = React.createElement('div', {}, [header, body]);
-
-    return (
-      <div className="about_link">
-        {this.props.expand ? content : ''}
-      </div>
-    );
+    if (this.props.expand) {
+      return (
+        <div className="about_content">
+          <img className="split_asterisk asterisk_left" key="asterisk-left" src={require('../assets/asterisk-left.png')} />
+          <div>Index</div>
+          <img className="split_asterisk asterisk_right" key="asterisk-right" src={require('../assets/asterisk-right.png')} />
+        </div>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
