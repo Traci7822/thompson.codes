@@ -1,4 +1,13 @@
-.about_us.small_about {
+.pages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  height: 25%;
+}
+
+.index.small {
   margin: 40px auto 40px auto;
   height: 250px;
   width: 250px;
@@ -6,22 +15,12 @@
   background-size: cover;
 }
 
-/* Add transition effect when growing to large */
-.about_us.large_about {
+.index.large {
   padding-top: 1%;
   height: -webkit-fill-available;
+  width: 100%;
 }
 
 .split_asterisk {
   height: 300px;
-}
-
-.about_content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.content {
-  background: #8AACCE;
 }

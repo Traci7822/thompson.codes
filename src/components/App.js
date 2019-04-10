@@ -3,7 +3,7 @@ import {hot} from "react-hot-loader";
 import "../styles/app.css";
 
 import Banner from './banner'
-import About from './about'
+import Index from './index'
 import Profiles from './profiles'
 
 class App extends Component {
@@ -13,6 +13,7 @@ class App extends Component {
       showBanner: true,
       showProfiles: false,
       expand: false,
+      fields: ['About', 'Contact', 'Third Thing', 'Fourth Thing'],
     }
   }
 
@@ -23,21 +24,25 @@ class App extends Component {
     })
   }
 
-  expandAbout = () => {
+  expandIndex = () => {
+    if (this.state.expand == true) {
+      return null;
+    }
     this.setState({
       expand: !this.state.expand
     });
   }
 
   render() {
-    const about_size = this.state.expand ? "large_about" : "small_about";
+    // const about_size = this.state.expand ? "large_about" : "small_about";
+    const index_status = this.state.expand ? "large" : "small";
 
     return (
       <div>
         <Banner toggleBanner={this.toggleBanner} showBanner={this.state.showBanner} />
         <div className="content">
-          <div className={'about_us ' + about_size} onClick={this.expandAbout}>
-            <About expand={this.state.expand}/>
+          <div className={'index ' + index_status} onClick={this.expandIndex}>
+            <Index expand={this.state.expand} fields={this.state.fields}/>
           </div>
           <Profiles showProfiles={this.state.showProfiles} />
         </div>
