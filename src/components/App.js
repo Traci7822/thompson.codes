@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {hot} from "react-hot-loader";
+import { BrowserRouter } from 'react-router-dom';
 import "../styles/app.css";
 
 import Banner from './banner'
@@ -38,15 +39,17 @@ class App extends Component {
     const index_status = this.state.expand ? "large" : "small";
 
     return (
-      <div>
-        <Banner toggleBanner={this.toggleBanner} showBanner={this.state.showBanner} />
-        <div className="content">
-          <div className={'index ' + index_status} onClick={this.expandIndex}>
-            <Index expand={this.state.expand} fields={this.state.fields}/>
+      <BrowserRouter>
+        <div>
+          <Banner toggleBanner={this.toggleBanner} showBanner={this.state.showBanner} />
+          <div className="content">
+            <div className={'index ' + index_status} onClick={this.expandIndex}>
+              <Index expand={this.state.expand} fields={this.state.fields}/>
+            </div>
+            <Profiles showProfiles={this.state.showProfiles} />
           </div>
-          <Profiles showProfiles={this.state.showProfiles} />
         </div>
-      </div>
+      </BrowserRouter>
     )
   }
 }

@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import {hot} from "react-hot-loader";
-import "../styles/banner.css";
+import "../styles/page.css";
+import { Link } from 'react-router-dom';
+
+
 
 class Page extends Component {
   constructor() {
@@ -13,7 +16,7 @@ class Page extends Component {
     return (
       <div className="page">
         <h1>
-          {this.props.field}
+          <Link to={`./${this.props.field}`} >{this.props.field}</Link>
         </h1>
       </div>
     );
