@@ -26,12 +26,12 @@ class Details extends Component {
       return (
         <div className={"details_" + this.props.id}>
           {Object.keys(this.state).map((key, value) => {
+            console.log(key);
+            console.log(title);
             if (key == title) {
               return Object.keys(this.state[key]).map((property, value) => {
                 return <div key={property}>{this.state[key][property]}</div>
-                // console.log(property);
-                // console.log(this.state[key][property]);
-                });
+              });
             }
           }, this)}
         </div>
