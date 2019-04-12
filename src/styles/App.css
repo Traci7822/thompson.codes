@@ -3,13 +3,14 @@
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-html, body, #app, #app>div {
+html, body, #root, #app, #app>div {
   margin: 0;
+  height: 100%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #8AACCE;
+  /* background: #8AACCE; */
 }

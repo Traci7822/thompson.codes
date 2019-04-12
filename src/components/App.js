@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import "../styles/app.css";
 
 import Banner from './banner'
-import Index from './index'
+import About from './about'
 import Profiles from './profiles'
 
 class App extends Component {
@@ -12,43 +12,47 @@ class App extends Component {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
       showBanner: true,
+      showAbout: false,
+      // showProfiles: false,
+      // expand: false,
+      // active: false,
+      // fields: ['About', 'Contact', 'Third Thing', 'Fourth Thing'],
+    }
+  }
+
+  // TODO: Make these dynamic so toggles right page on and all others off
+  showAbout = () => {
+    this.setState({
+      showAbout: true,
+      showBanner: false,
       showProfiles: false,
-      expand: false,
-      active: false,
-      fields: ['About', 'Contact', 'Third Thing', 'Fourth Thing'],
-    }
-  }
-
-  toggleBanner = () => {
-    this.setState({
-      showProfiles: !this.state.showProfiles,
-      showBanner: !this.state.showBanner
-    })
-  }
-
-  expandIndex = () => {
-    if (this.state.expand == true) {
-      return null;
-    }
-    this.setState({
-      expand: !this.state.expand
     });
   }
 
-  render() {
-    // const about_size = this.state.expand ? "large_about" : "small_about";
-    const index_status = this.state.expand ? "large" : "small";
+  showBanner = () => {
+    this.setState({
+      showAbout: false,
+      showBanner: true,
+      showProfiles: false,
+    })
+  }
 
+  showProfiles = () => {
+    this.setState({
+      showAbout: false,
+      showBanner: false,
+      showProfiles: true,
+    })
+  }
+
+
+  render() {
     return (
       <BrowserRouter>
-        <div>
-          <Banner toggleBanner={this.toggleBanner} showBanner={this.state.showBanner} />
-          <div className="content">
-            <div className={'index ' + index_status} onClick={this.expandIndex}>
-              <Index expand={this.state.expand} fields={this.state.fields} active={this.state.active}/>
-            </div>
-            <Profiles showProfiles={this.state.showProfiles} profileStatus={this.state.active}/>
-          </div>
+        <div className="front">
+          <Banner showBanner={this.state.showBanner} showAbout={this.showAbout} />
+          <About showAbout={this.state.showAbout} showBanner={this.showBanner} showProfiles={this.showProfiles}/>
+          <Profiles showProfiles={this.state.showProfiles} />
         </div>
       </BrowserRouter>
     )
