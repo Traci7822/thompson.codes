@@ -8,9 +8,10 @@ html, body, #root, #app, #app>div {
   height: 100%;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background: #8AACCE; */
+.header {
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
 }

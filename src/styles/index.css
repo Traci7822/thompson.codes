@@ -1,26 +1,34 @@
-.pages {
+.index {
+  height: 100%;
+  width: 100%;
+  background: honeydew;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
   align-items: center;
-  height: 25%;
 }
 
-.index.small {
-  margin: 40px auto 40px auto;
-  height: 250px;
-  width: 250px;
-  background-image: url('../assets/asterisk.png');
-  background-size: cover;
+button {
+  background: none;
+  border: none;
 }
 
-.index.large {
-  padding-top: 1%;
-  height: -webkit-fill-available;
-  width: 100%;
+.top_button {
+  transform:  rotate(180deg);
+  float: left;
 }
 
-.split_asterisk {
-  height: 300px;
+.bottom_button {
+  float: right;
 }
+
+button img {
+  width: 20%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+}
+

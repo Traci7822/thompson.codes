@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import "../styles/app.css";
 
 import Banner from './banner'
-import About from './about'
+import Index from './index'
 import Profiles from './profiles'
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
       showBanner: true,
-      showAbout: false,
+      showIndex: false,
       // showProfiles: false,
       // expand: false,
       // active: false,
@@ -21,9 +21,9 @@ class App extends Component {
   }
 
   // TODO: Make these dynamic so toggles right page on and all others off
-  showAbout = () => {
+  showIndex = () => {
     this.setState({
-      showAbout: true,
+      showIndex: true,
       showBanner: false,
       showProfiles: false,
     });
@@ -31,7 +31,7 @@ class App extends Component {
 
   showBanner = () => {
     this.setState({
-      showAbout: false,
+      showIndex: false,
       showBanner: true,
       showProfiles: false,
     })
@@ -39,7 +39,7 @@ class App extends Component {
 
   showProfiles = () => {
     this.setState({
-      showAbout: false,
+      showIndex: false,
       showBanner: false,
       showProfiles: true,
     })
@@ -50,8 +50,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="front">
-          <Banner showBanner={this.state.showBanner} showAbout={this.showAbout} />
-          <About showAbout={this.state.showAbout} showBanner={this.showBanner} showProfiles={this.showProfiles}/>
+          <Banner showBanner={this.state.showBanner} showIndex={this.showIndex} />
+          <Index showIndex={this.state.showIndex} showBanner={this.showBanner} showProfiles={this.showProfiles}/>
           <Profiles showProfiles={this.state.showProfiles} />
         </div>
       </BrowserRouter>

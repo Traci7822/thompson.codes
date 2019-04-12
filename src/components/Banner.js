@@ -23,8 +23,8 @@ class Banner extends Component {
             <img className="title_image" src={mountain} />
           <h1 className="title_name second">CODES</h1>
         </div>
-        <div className="bottom">
-          <button className="enter" onClick={this.props.showAbout}>
+        <div className="banner_footer">
+          <button className="bottom_button" onClick={this.props.showIndex}>
             <img src={require('../assets/down-arrow.png')}></img>
           </button>
         </div>

@@ -25,24 +25,6 @@
   font-size: 75px;
 }
 
-/* .enter {
-  /* background-image: url('../assets/down-arrow.svg'); */
-  /* height: 100%; */
-  /* width: 20%; */
-  /* background-repeat: no-repeat; */
-  /* background-position: center; */
-  /* background-size: 100% 25%; */
-  /* border: none; */
-/* } */
-
-/* .bottom {
-  height: 25%;
-  width: 100%;
-  bottom: 0px;
-  position: fixed;
-  text-align: center;
-} */
-
 .front {
   display: flex;
   flex-direction: column;

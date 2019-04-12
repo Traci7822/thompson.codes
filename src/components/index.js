@@ -2,33 +2,38 @@ import React, { Component } from "react";
 import {hot} from "react-hot-loader";
 import "../styles/index.css";
 
-import Page from './page';
+import Menu from './menu';
 
 class Index extends Component {
   constructor() {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
-    }
-  }
-
-  activatePage = () => {
-    // hide profiles and other info pages
-    // show clicked page
-    this.setState({
-      active: true
-    });
+      pages: ['About', 'Second Thing', 'Third Thing', 'Contact']
+    };
   }
 
   render() {
-    if (this.props.expand) {
+    if (this.props.showIndex) {
       return (
-        <div className="pages">
-          <img className="split_asterisk asterisk_left" key="asterisk-left" src={require('../assets/asterisk-left.png')} />
-          {this.props.fields.map(function(field) {
-            return <Page key={field} field={field} onClick={this.activatePage}/>
-          }, this)}
-          <img className="split_asterisk asterisk_right" key="asterisk-right" src={require('../assets/asterisk-right.png')} />
-        </div>
+        <div className="index">
+
+          <div className="header">
+            <button className="top_button" onClick={this.props.showBanner}>
+              <img src={require('../assets/down-arrow.png')}></img>
+            </button>
+          </div>
+
+          <div className="menu">
+            <Menu pages={this.state.pages} />
+          </div>
+
+          <div className="footer">
+            <button className="bottom_button" onClick={this.props.showProfiles}>
+              <img src={require('../assets/down-arrow.png')} />
+            </button>
+          </div>
+
+        </div> // !-- index
       );
     } else {
       return null;
