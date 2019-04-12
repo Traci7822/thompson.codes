@@ -8,7 +8,15 @@ class Menu extends Component {
   constructor() {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
+      showDetails: false,
     }
+  }
+
+
+  toggleDetails = () => {
+    this.setState({
+      showDetails: !this.state.showDetails,
+    });
   }
 
   render() {
@@ -16,8 +24,8 @@ class Menu extends Component {
       <div className="menu_bar_container">
         {/* TODO: Make bars dynamic and interactable */}
         {Object.entries(this.props.pages).map(function(page) {
-          return <MenuBar title={page[1]} id={page[0]} />
-        })}
+          return <MenuBar key={page[0]} title={page[1]} id={page[0]} toggleDetails={this.toggleDetails} showDetails={this.state.showDetails}/>
+        }, this )}
       </div>
     )
   }
