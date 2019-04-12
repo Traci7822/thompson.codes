@@ -14,6 +14,7 @@ class App extends Component {
       showBanner: true,
       showProfiles: false,
       expand: false,
+      active: false,
       fields: ['About', 'Contact', 'Third Thing', 'Fourth Thing'],
     }
   }
@@ -44,9 +45,9 @@ class App extends Component {
           <Banner toggleBanner={this.toggleBanner} showBanner={this.state.showBanner} />
           <div className="content">
             <div className={'index ' + index_status} onClick={this.expandIndex}>
-              <Index expand={this.state.expand} fields={this.state.fields}/>
+              <Index expand={this.state.expand} fields={this.state.fields} active={this.state.active}/>
             </div>
-            <Profiles showProfiles={this.state.showProfiles} />
+            <Profiles showProfiles={this.state.showProfiles} profileStatus={this.state.active}/>
           </div>
         </div>
       </BrowserRouter>

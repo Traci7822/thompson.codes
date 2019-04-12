@@ -13,8 +13,8 @@ class Profile extends Component {
 
   render() {
     return (
-      <div className={'profile ' + this.props.profile_size + ' ' + this.props.person[0].toLowerCase()}>
-          <a className='profile_link' href={this.props.person[1]} target="_blank" />
+      <div className={'profile active_' + this.props.profileStatus + ' ' + this.props.person[0].toLowerCase()}>
+        <a className='profile_link' href={this.props.person[1]} target="_blank" />
       </div>
     );
   }

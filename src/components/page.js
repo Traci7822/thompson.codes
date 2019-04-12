@@ -12,11 +12,15 @@ class Page extends Component {
     }
   }
 
+  lowerProfiles = () => {
+
+  }
+
   render() {
     return (
       <div className="page">
         <h1>
-          <Link to={`./${this.props.field}`} >{this.props.field}</Link>
+          <Link to={`./${this.props.field}`} onClick={this.lowerProfiles}>{this.props.field}</Link>
         </h1>
       </div>
     );

@@ -9,7 +9,6 @@
 
 .profile {
   width: 50%;
-  overflow: hidden;
   background-repeat: no-repeat;
   background-position: left bottom;
   border-top: 3px solid;
@@ -21,29 +20,21 @@
   border-right: 1.5px solid;
 }
 
-.traci.profile.small_profile {
-  opacity: 0.4;
-}
-
-.traci.profile.small_profile:hover {
-  opacity: 1;
-}
-
 .bryan {
   background-image: url('../assets/bryan2.jpg');
   height: 100%;
   border-left: 1.5px solid;
 }
 
-.bryan.profile.small_profile {
-  opacity: 0.4;
-}
-
-.bryan.profile.small_profile:hover {
-  opacity: 1;
-}
-
 .profile_link {
   display: block;
   height: 100%;
+}
+
+.active_true {
+  background: blue;
+}
+
+active_false {
+  background: red;
 }
