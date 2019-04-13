@@ -11,15 +11,25 @@ class MenuBar extends Component {
     }
   }
 
+  toggleDetails = () => {
+    this.setState({
+      showDetails: !this.state.showDetails,
+    });
+    this.props.toggleBars();
+  }
+
   render() {
+    const enlarge = this.state.showDetails ? ' enlarge' : '';
+    const shorten = this.props.shorten ? ' shorten' : '';
     return (
-      <div className="menu_bar_row">
-        <div className={"menu_bar menu_bar_" + this.props.id} onClick={this.props.toggleDetails}>
+      <div className={"menu_bar_row"}>
+        <div className={"menu_bar menu_bar_" + this.props.id + enlarge} onClick={this.toggleDetails}>
           <MenuBarTitle title={this.props.title} />
         </div>
 
+        {/* Don't show details except for the clicked title bar */}
         <div className='details'>
-          <Details key={this.props.title} title={this.props.title} id={this.props.id} showDetails={this.props.showDetails} />
+          <Details key={this.props.title} title={this.props.title} id={this.props.id} showDetails={this.state.showDetails} />
         </div>
       </div>
     )

@@ -3,6 +3,16 @@
   width: 90%;
 }
 
+.enlarge {
+  width: 90%;
+  height: 400% !important ;
+  /* margin-left: 10%; */
+}
+
+.shorten {
+  width: 10%;
+}
+
 .menu_bar_1 {
   background-color: #07393C;
   width: 75%;
