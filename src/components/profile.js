@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 
 import ProfileText from './profile_text';
@@ -11,10 +12,13 @@ class Profile extends Component {
     }
   }
 
+  static propTypes = {
+    person: PropTypes.array.isRequired,
+  }
   render() {
     return (
-      <div className={'profile active_' + this.props.profileStatus + ' ' + this.props.person[0].toLowerCase()}>
-        <a className='profile_link' href={this.props.person[1]} target="_blank" />
+      <div className={'profile' + ' ' + this.props.person[0].toLowerCase()}>
+        <a className='profile_link' href={this.props.person[1]} target="_blank" rel="noopener noreferrer" />
       </div>
     );
   }
