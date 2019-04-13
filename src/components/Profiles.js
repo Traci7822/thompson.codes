@@ -24,10 +24,17 @@ class Profiles extends Component {
     const profile_size = this.state.expand ? "small_profile" : "large_profile";
 
     return (
-      <div className='profiles'>
-        {Object.entries(this.state.people).map(function(person) {
-          return <Profile key={person} person={person} profile_size={profile_size}/>
-        })}
+      <div className="profiles_container">
+        <div className="header">
+          <button className="top_button" onClick={this.props.showIndex}>
+            <img src={require('../assets/down-arrow.png')}></img>
+          </button>
+        </div>
+        <div className='profiles'>
+          {Object.entries(this.state.people).map(function(person) {
+            return <Profile key={person} person={person} profile_size={profile_size}/>
+          })}
+        </div>
       </div>
     );
   }
