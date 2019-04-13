@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 
-import ProfileText from './profile_text';
+// import ProfileText from './profile_text';    NOTE: COMMENTED OUT AS NOT CURRENTLY USED
 
 class Profile extends Component {
   constructor() {
