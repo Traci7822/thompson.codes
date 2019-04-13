@@ -9,12 +9,11 @@ class Menu extends Component {
   constructor() {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
-      showDetails: false,
+      // showDetails: false,
     }
   }
 
   toggleDetails = () => {
-    console.log(this);
     this.setState({
       showDetails: !this.state.showDetails,
       id: this.state.id,
@@ -25,6 +24,8 @@ class Menu extends Component {
   render() {
     // const details = null;
     let details;
+    const active = this.state.showDetails ? ' active' : '';
+
     if (this.state.showDetails) {
       details = <Details key={this.state.title} title={this.state.title} id={this.state.id} showDetails={this.state.showDetails} />;
     } else {
@@ -39,7 +40,7 @@ class Menu extends Component {
           }, this )}
         </div>
         {/* set this over the menubar container */}
-        <div className="details_container">
+        <div className={"details_container " + active}>
           {details}
         </div>
       </div>

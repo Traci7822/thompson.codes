@@ -7,6 +7,7 @@ class MenuBar extends Component {
   constructor() {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
+      // showDetails: false,
     }
   }
 
@@ -25,8 +26,6 @@ class MenuBar extends Component {
         <div className={"menu_bar menu_bar_" + this.props.id}>
           <MenuBarTitle title={this.props.title} />
         </div>
-
-
       </div>
     )
   }
