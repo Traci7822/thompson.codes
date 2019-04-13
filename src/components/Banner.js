@@ -13,7 +13,7 @@ class Banner extends Component {
   }
 
   static propTypes = {
-    showIndex: PropTypes.bool.isRequired,
+    showIndex: PropTypes.func.isRequired,
     showBanner: PropTypes.bool.isRequired,
   }
   render() {
