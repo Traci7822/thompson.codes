@@ -8,7 +8,8 @@ class Index extends Component {
   constructor() {
     super(); // populates this.props (fixed for lifetime of component)
     this.state = { // data that will change using setState
-      pages: ['About', 'Second Thing', 'Third Thing', 'Contact']
+      pages: ['About', 'Second Thing', 'Third Thing', 'Contact'],
+      showDetail: false,
     };
   }
 

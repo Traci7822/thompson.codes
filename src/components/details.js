@@ -22,8 +22,10 @@ class Details extends Component {
       return null;
     } else {
       const title = this.props.title.toLowerCase();
+      const active = this.props.showDetails ? ' active' : '';
+
       return (
-        <div className={"details_" + this.props.id}>
+        <div className={"detail active " + active}>
           {Object.keys(this.state).map((key, value) => {
             if (key == title) {
               return Object.keys(this.state[key]).map((property, value) => {
