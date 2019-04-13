@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 import "../styles/page.css";
 import { Link } from 'react-router-dom';
@@ -16,6 +17,9 @@ class Page extends Component {
 
   }
 
+  static propTypes = {
+    field: PropTypes.string.isRequired,
+  }
   render() {
     return (
       <div className="page">
