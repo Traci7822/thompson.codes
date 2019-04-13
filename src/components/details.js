@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 import "../styles/details.css";
 
@@ -17,7 +18,11 @@ class Details extends Component {
     }
   }
   
-
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    showDetails: PropTypes.bool.isRequired,
+    id: PropTypes.string.isRequired,
+  }
   render() {
     if (!this.props.showDetails) {
       return null;
@@ -25,11 +30,9 @@ class Details extends Component {
       const title = this.props.title.toLowerCase();
       return (
         <div className={"details_" + this.props.id}>
-          {Object.keys(this.state).map((key, value) => {
-            console.log(key);
-            console.log(title);
+          {Object.keys(this.state).map((key) => {
             if (key == title) {
-              return Object.keys(this.state[key]).map((property, value) => {
+              return Object.keys(this.state[key]).map((property) => {
                 return <div key={property}>{this.state[key][property]}</div>
               });
             }

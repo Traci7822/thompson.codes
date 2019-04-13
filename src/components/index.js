@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 import "../styles/index.css";
 
@@ -12,6 +13,11 @@ class Index extends Component {
     };
   }
 
+  static propTypes = {
+    showIndex: PropTypes.bool.isRequired,
+    showBanner: PropTypes.func.isRequired,
+    showProfiles: PropTypes.func.isRequired,
+  }
   render() {
     if (this.props.showIndex) {
       return (

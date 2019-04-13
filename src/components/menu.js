@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 import "../styles/menu.css";
 
@@ -19,6 +20,9 @@ class Menu extends Component {
     });
   }
 
+  static propTypes = {
+    pages: PropTypes.array.isRequired,
+  }
   render() {
     return (
       <div className="menu_bar_container">

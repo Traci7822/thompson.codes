@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 import "../styles/profiles.css";
 
@@ -16,6 +17,10 @@ class Profiles extends Component {
     };
   }
 
+  static propTypes = {
+    showProfiles: PropTypes.bool,
+    showIndex: PropTypes.func.isRequired,
+  }
   render() {
     if (!this.props.showProfiles) {
       return null;

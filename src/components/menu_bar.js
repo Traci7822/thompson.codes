@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 import "../styles/menu_bar.css";
 import MenuBarTitle from './menu_bar_title';
@@ -11,6 +12,12 @@ class MenuBar extends Component {
     }
   }
 
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    showDetails: PropTypes.bool.isRequired,
+    toggleDetails: PropTypes.func.isRequired,
+    id: PropTypes.string.isRequired,
+  }
   render() {
     return (
       <div className="menu_bar_row">
