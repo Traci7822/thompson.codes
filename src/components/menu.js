@@ -8,25 +8,35 @@ class Menu extends Component {
   constructor() {
     super();
     this.state = {
-      showDetails: false,
+      pages: [
+        {'title': 'About', 'active': false},
+        {'title': 'Second Thing', 'active': false},
+        {'title': 'Third Thing', 'active': false},
+        {'title': 'Contact', 'active': false},
+      ],
     }
   }
 
-  // toggleDetails = () => {
-  //   console.log(this);
-  //   this.setState({
-  //     showDetails: !this.state.showDetails,
-  //     id: this.state.id,
-  //     title: this.state.title
-  //   });
-  // }
+  setActiveComponent = (id) => {
+    const {pages} = this.state;
+    Object.entries(pages).map((property) => {
+      if (id == property[0]) {
+        pages[property[0]].active = true;
+      } else {
+        pages[property[0]].active = false;
+      }
+    });
+    this.setState({
+      pages
+    });
+  }
 
   render() {
     return (
       <div className="menu_and_details">
         <div className="menu_bar_container">
-          {Object.entries(this.props.pages).map(function(page) {
-            return <MenuBar key={page[0]} title={page[1]} id={page[0]} toggleDetails={this.toggleDetails} showDetails={this.state.showDetails} />
+          {Object.entries(this.state.pages).map(function(page) {
+            return <MenuBar key={page[0]} title={page[1].title} id={page[0]} setActiveComponent={this.setActiveComponent} active={page[1].active} />
           }, this )}
         </div>
       </div>

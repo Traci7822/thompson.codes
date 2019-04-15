@@ -13,23 +13,19 @@ class MenuBar extends Component {
   }
 
   toggleDetails = () => {
-    this.setState({
-      showDetails: !this.state.showDetails,
-      id: this.props.id,
-      title: this.props.title
-    });
+    this.props.setActiveComponent(this.props.id);
   }
 
   render() {
     let details;
-    let expand = this.state.showDetails ? ' expand' : '';
-    if (this.state.showDetails) {
-      details = <Details key={this.state.title} title={this.state.title} id={this.state.id} showDetails={this.state.showDetails} />;
+    let status = this.props.active ? ' active' : ' inactive';
+    if (this.props.active) {
+      details = <Details key={this.state.title} title={this.state.title} id={this.state.id} showDetails={this.props.active} />;
     } else {
       details = '';
     }
     return (
-      <div className={"menu_bar_row" + expand} onClick={this.toggleDetails}>
+      <div className={"menu_bar_row" + status} onClick={this.toggleDetails}>
         <div className={"menu_bar menu_bar_" + this.props.id}>
           <MenuBarTitle title={this.props.title} />
         </div>
