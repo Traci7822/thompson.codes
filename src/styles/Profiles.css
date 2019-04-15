@@ -1,7 +1,7 @@
 .profiles {
   display: flex;
   flex-direction: row;
-  height: 75%;
+  height: 80%;
   width: 100%;
   bottom: 0px;
   position: absolute;
@@ -9,20 +9,22 @@
 
 .profile {
   width: 50%;
-  background-repeat: no-repeat;
-  background-position: left bottom;
+  background-size: cover;
   border-top: 3px solid;
+}
+
+.profiles_container {
+  height: 100%;
+  width: 100%;
 }
 
 .traci {
   background-image: url('../assets/traci.jpg');
-  height: 100%;
   border-right: 1.5px solid;
 }
 
 .bryan {
-  background-image: url('../assets/bryan2.jpg');
-  height: 100%;
+  background-image: url('../assets/bryan.jpg');
   border-left: 1.5px solid;
 }
 

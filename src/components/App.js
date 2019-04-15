@@ -47,7 +47,7 @@ class App extends Component {
         <div className="front">
           <Banner showBanner={this.state.showBanner} showIndex={this.showIndex} />
           <Index showIndex={this.state.showIndex} showBanner={this.showBanner} showProfiles={this.showProfiles}/>
-          <Profiles showProfiles={this.state.showProfiles} />
+          <Profiles showProfiles={this.state.showProfiles} showIndex={this.showIndex} />
         </div>
       </BrowserRouter>
     )

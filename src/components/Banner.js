@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 import "../styles/banner.css";
 
@@ -11,6 +12,10 @@ class Banner extends Component {
     }
   }
 
+  static propTypes = {
+    showIndex: PropTypes.func.isRequired,
+    showBanner: PropTypes.bool.isRequired,
+  }
   render() {
     if (!this.props.showBanner) {
       return null;
