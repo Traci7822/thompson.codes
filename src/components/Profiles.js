@@ -6,9 +6,8 @@ import Profile from './profile'
 
 class Profiles extends Component {
   constructor() {
-    super(); // populates this.props (fixed for lifetime of component)
-    this.state = { // data that will change using setState
-      // turn people into props
+    super();
+    this.state = {
       people: {
         Traci: "http://www.tracihthompson.com",
         Bryan: "http://www.snowboardtechie.com"

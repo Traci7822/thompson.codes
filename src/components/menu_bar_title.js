@@ -5,8 +5,8 @@ import "../styles/menu_bar.css";
 
 class MenuBarTitle extends Component {
   constructor() {
-    super(); // populates this.props (fixed for lifetime of component)
-    this.state = { // data that will change using setState
+    super();
+    this.state = {
     }
   }
 

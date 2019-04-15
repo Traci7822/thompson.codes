@@ -21,19 +21,18 @@ class Details extends Component {
     if (!this.props.showDetails) {
       return null;
     } else {
-      // const title = this.props.title.toLowerCase();
+      const title = this.props.title.toLowerCase();
       const active = this.props.showDetails ? ' active' : '';
 
       return (
         <div className={"detail active " + active}>
-          {/* {Object.keys(this.state).map((key, value) => {
+          {Object.keys(this.state).map((key, value) => {
             if (key == title) {
               return Object.keys(this.state[key]).map((property, value) => {
                 return <div key={property}>{this.state[key][property]}</div>
               });
             }
-          }, this)} */}
-          Details div
+          }, this)}
         </div>
       );
     }

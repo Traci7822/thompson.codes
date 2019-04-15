@@ -30,11 +30,9 @@ class Menu extends Component {
   render() {
     return (
       <div className="menu_and_details">
-        <div className="menu_bar_container">
-          {Object.entries(this.state.pages).map(function(page) {
-            return <MenuBar key={page[0]} title={page[1].title} id={page[0]} setActiveComponent={this.setActiveComponent} active={page[1].active} />
-          }, this )}
-        </div>
+        {Object.entries(this.state.pages).map(function(page) {
+          return <MenuBar key={page[0]} title={page[1].title} id={page[0]} setActiveComponent={this.setActiveComponent} active={page[1].active} />
+        }, this )}
       </div>
     )
   }
