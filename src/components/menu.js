@@ -20,14 +20,10 @@ class Menu extends Component {
   setActiveComponent = (id) => {
     const {pages} = this.state;
     Object.entries(pages).map((property) => {
-      if (id == property[0]) {
-        pages[property[0]].active = true;
-      } else {
-        pages[property[0]].active = false;
-      }
+      pages[property[0]].active = (id == property[0] && !pages[property[0]].active);
     });
     this.setState({
-      pages
+      pages,
     });
   }
 
