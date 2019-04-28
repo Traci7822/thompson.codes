@@ -1,27 +1,18 @@
-.pages {
+.menu {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  height: 25%;
-}
-
-.index.small {
-  margin: 40px auto 40px auto;
-  height: 250px;
-  width: 250px;
-  background-image: url('../assets/asterisk.png');
-  background-size: cover;
-}
-
-.index.large {
-  padding-top: 1%;
-  height: -webkit-fill-available;
+  height: 80%;
   width: 100%;
 }
 
-.split_asterisk {
-  height: 300px;
+/* Should flex properties be inherited instead? */
+.menu_and_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 70%;
+  width: 100%;
 }
-

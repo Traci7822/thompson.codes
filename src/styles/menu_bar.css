@@ -1,56 +1,31 @@
-.menu_bar_0 {
-  background-color: #420039;
-  width: 90%;
-}
-
-.menu_bar_1 {
-  background-color: #07393C;
-  width: 75%;
-}
-
-.menu_bar_2 {
-  background-color: #CECD71;
-  width: 60%;
-}
-
-.menu_bar_3 {
-  background-color: #38668C;
-  width: 45%;
-}
-
-.menu {
-  width: 100%;
-}
-
 .menu_bar {
   height: 100%;
   color: white;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu_bar_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
   width: 100%;
-  margin: 75px 0px 75px 0px;
 }
 
-.menu_bar_row {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
+/* TODO:  Set color properties dynamically w/ a theme */
+
+.menu_bar_0 {
+  background-color: #420039;
 }
 
-.page_title {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.menu_bar_1 {
+  background-color: #07393C;
+}
+
+.menu_bar_2 {
+  background-color: #CECD71;
+}
+
+.menu_bar_3 {
+  background-color: #38668C;
+}
+
+.menu_bar.inactive {
+  flex: 1 1 0;
+}
+.menu_bar.active {
+  flex: 3 1 auto;
 }

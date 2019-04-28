@@ -9,18 +9,13 @@ import Profiles from './profiles'
 
 class App extends Component {
   constructor() {
-    super(); // populates this.props (fixed for lifetime of component)
-    this.state = { // data that will change using setState
+    super();
+    this.state = {
       showBanner: true,
       showIndex: false,
-      // showProfiles: false,
-      // expand: false,
-      // active: false,
-      // fields: ['About', 'Contact', 'Third Thing', 'Fourth Thing'],
     }
   }
 
-  // TODO: Make these dynamic so toggles right page on and all others off
   showIndex = () => {
     this.setState({
       showIndex: true,

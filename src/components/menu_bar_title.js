@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
 import "../styles/menu_bar.css";
 
+
 class MenuBarTitle extends Component {
   constructor() {
-    super(); // populates this.props (fixed for lifetime of component)
-    this.state = { // data that will change using setState
+    super();
+    this.state = {
     }
   }
 
@@ -15,7 +16,9 @@ class MenuBarTitle extends Component {
   }
   render() {
     return (
-      <h1 className="page_title" >{this.props.title}</h1>
+      <div className="menu_bar_content">
+        <h1 className="page_title" >{this.props.title}</h1>
+      </div>
     )
   }
 }

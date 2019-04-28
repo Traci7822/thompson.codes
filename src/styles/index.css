@@ -25,10 +25,3 @@ button img {
   width: 20%;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 80%;
-}
-

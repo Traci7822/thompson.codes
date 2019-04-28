@@ -7,16 +7,24 @@ import MenuBar from './menu_bar';
 
 class Menu extends Component {
   constructor() {
-    super(); // populates this.props (fixed for lifetime of component)
-    this.state = { // data that will change using setState
-      showDetails: false,
+    super();
+    this.state = {
+      pages: [
+        {'title': 'About', 'active': false},
+        {'title': 'Second Thing', 'active': false},
+        {'title': 'Third Thing', 'active': false},
+        {'title': 'Contact', 'active': false},
+      ],
     }
   }
 
-
-  toggleDetails = () => {
+  setActiveComponent = (id) => {
+    const {pages} = this.state;
+    Object.entries(pages).map((property) => {
+      pages[property[0]].active = (id == property[0] && !pages[property[0]].active);
+    });
     this.setState({
-      showDetails: !this.state.showDetails,
+      pages,
     });
   }
 
@@ -25,10 +33,9 @@ class Menu extends Component {
   }
   render() {
     return (
-      <div className="menu_bar_container">
-        {/* TODO: Make bars dynamic and interactable */}
-        {Object.entries(this.props.pages).map(function(page) {
-          return <MenuBar key={page[0]} title={page[1]} id={page[0]} toggleDetails={this.toggleDetails} showDetails={this.state.showDetails}/>
+      <div className="menu_and_details">
+        {Object.entries(this.state.pages).map(function(page) {
+          return <MenuBar key={page[0]} title={page[1].title} id={page[0]} setActiveComponent={this.setActiveComponent} active={page[1].active} />
         }, this )}
       </div>
     )
