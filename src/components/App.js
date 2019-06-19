@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import {hot} from "react-hot-loader";
 import { BrowserRouter } from 'react-router-dom';
-import "../styles/app.css";
+import "../styles/App.css";
 
-import Banner from './banner'
+import Banner from './Banner'
 import Index from './index'
-import Profiles from './profiles'
+import Profiles from './Profiles'
 
 class App extends Component {
   constructor() {
