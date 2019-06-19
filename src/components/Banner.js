@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {hot} from "react-hot-loader";
-import "../styles/banner.css";
+import "../styles/Banner.css";
 
 import mountain from '../assets/mountain.png';
 
