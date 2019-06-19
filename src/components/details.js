@@ -12,8 +12,7 @@ class Details extends Component {
         'Phone': '303-870-9814'
       },
       about: {
-        'Traci': 'Traci',
-        'Bryan': 'Bryan',
+        'About': 'Thompson Codes, LLC is a code shop co-founded and run by programmer couple Traci and Bryan Thompson'
       }
     }
   }
@@ -36,7 +35,9 @@ class Details extends Component {
           {Object.keys(this.state).map((key, value) => {
             if (key == title) {
               return Object.keys(this.state[key]).map((property) => {
-                return <div key={property}>{this.state[key][property]}</div>
+                return <div key={property}>
+                  {this.state[key][property]}
+                </div>
               });
             }
           }, this)}
