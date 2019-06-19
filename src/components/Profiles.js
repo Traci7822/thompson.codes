@@ -10,7 +10,7 @@ class Profiles extends Component {
     super();
     this.state = {
       people: {
-        Traci: "http://www.tracihthompson.com",
+        Traci: "http://traci.thompson.codes",
         Bryan: "http://www.snowboardtechie.com"
       },
     };

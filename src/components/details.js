@@ -12,7 +12,7 @@ class Details extends Component {
         'Phone': '303-870-9814'
       },
       about: {
-        'About': 'Thompson Codes, LLC is a code shop co-founded and run by programmer couple Traci and Bryan Thompson'
+        'About': 'Thompson Codes is co-founded and run by programmer couple Traci and Bryan Thompson'
       }
     }
   }
