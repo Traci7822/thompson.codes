@@ -15,6 +15,7 @@ class Banner extends Component {
   static propTypes = {
     showIndex: PropTypes.func.isRequired,
     showBanner: PropTypes.bool.isRequired,
+    showProfiles: PropTypes.func.isRequired,
   }
   render() {
     if (!this.props.showBanner) {
@@ -29,7 +30,7 @@ class Banner extends Component {
           <h1 className="title_name second">CODES</h1>
         </div>
         <div className="banner_footer">
-          <button className="bottom_button" onClick={this.props.showIndex}>
+          <button className="bottom_button" onClick={this.props.showProfiles}> {/* Adjust this to showIndex to bring back middle section*/}
             <img src={require('../assets/down-arrow.png')}></img>
           </button>
         </div>

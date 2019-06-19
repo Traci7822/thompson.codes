@@ -19,6 +19,7 @@ class Profiles extends Component {
   static propTypes = {
     showProfiles: PropTypes.bool,
     showIndex: PropTypes.func.isRequired,
+    showBanner: PropTypes.func.isRequired,
   }
   render() {
     if (!this.props.showProfiles) {
@@ -30,7 +31,7 @@ class Profiles extends Component {
     return (
       <div className="profiles_container">
         <div className="header">
-          <button className="top_button" onClick={this.props.showIndex}>
+          <button className="top_button" onClick={this.props.showBanner}> {/* Adjust this to showIndex to bring back middle menu */}
             <img src={require('../assets/down-arrow.png')}></img>
           </button>
         </div>
