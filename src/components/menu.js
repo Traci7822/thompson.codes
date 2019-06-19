@@ -11,9 +11,9 @@ class Menu extends Component {
     this.state = {
       pages: [
         {'title': 'About', 'active': false},
-        {'title': 'Second Thing', 'active': false},
-        {'title': 'Third Thing', 'active': false},
-        {'title': 'Contact', 'active': false},
+        // {'title': 'Second Thing', 'active': false},   HIDING THESE SINCE THEY AREN'T CURRENTLY USED
+        // {'title': 'Third Thing', 'active': false},    HIDING THESE SINCE THEY AREN'T CURRENTLY USED
+        {'title': 'Contact', 'active': false},  
       ],
     }
   }
